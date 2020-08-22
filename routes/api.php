@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Product;
 use App\Cart;
+use App\product_cars;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -21,3 +22,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::resource('products', 'ProductController');
 Route::resource('carts', 'CartController');
+Route::resource('cart', 'ProductCarsController');
