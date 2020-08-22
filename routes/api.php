@@ -4,7 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Product;
 use App\Cart;
-use App\product_cars;
+use App\Product_cars;
 /*
 |--------------------------------------------------------------------------
 | API Routes

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\product_cars;
+use App\Product_cars;
 use Illuminate\Http\Request;
 
 class ProductCarsController extends Controller
@@ -14,7 +14,7 @@ class ProductCarsController extends Controller
      */
     public function index()
     {
-        //
+        return Product_cars::all();
     }
 
     /**
@@ -25,39 +25,41 @@ class ProductCarsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $product_car = Product_cars::create($request->all());
+        return $product_car;
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\product_cars  $product_cars
+     * @param  \App\Product_cars  $product_cars
      * @return \Illuminate\Http\Response
      */
-    public function show(product_cars $product_cars)
+    public function show(Product_cars $product_cars)
     {
-        //
+        $product_cars = new Product_cars($product);
+        return $product_car;
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\product_cars  $product_cars
+     * @param  \App\Product_cars  $product_cars
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, product_cars $product_cars)
+    public function update(Request $request, Product_cars $product_cars)
     {
-        //
+        $product_cars->update($request->all());
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\product_cars  $product_cars
+     * @param  \App\Product_cars  $product_cars
      * @return \Illuminate\Http\Response
      */
-    public function destroy(product_cars $product_cars)
+    public function destroy(Product_cars $product_cars)
     {
         //
     }
